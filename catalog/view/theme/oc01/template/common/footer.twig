@@ -1,0 +1,192 @@
+<footer>
+  <div id="footer" class="footer_top">
+  <div class="container">
+    <div class="row footer_block"> 
+
+    	<div class="footer-left col-xs-12 col-sm-12 col-md-3 column">{{ footer_left }} </div>
+    	
+		      
+		{% if informations %}
+		<div class="col-xs-12 col-sm-12 col-md-3 column information">
+		<h4>{{ text_information }}</h4>
+		<h5 class="collapsed" data-target="#dropdown-information" data-toggle="collapse">{{ text_information }}
+		<span class="icon"></span></h5>        
+			<ul class="list-unstyled collapse" id="dropdown-information">
+			{% for information in informations %}
+				<li><a href="{{ information.href }}">{{ information.title }}</a></li>
+				{% endfor %}
+				<li><a href="{{ contact }}">{{ text_contact }}</a></li>
+			</ul>
+		</div>
+		{% endif %}
+		       
+		<div class="col-xs-12 col-sm-12 col-md-3 column">
+			<h4>{{ text_service }}</h4>
+			<h5 class="collapsed" data-target="#dropdown-service" data-toggle="collapse">{{ text_service }}
+			<span class="icon"></span></h5>  
+				<ul class="list-unstyled collapse" id="dropdown-service">
+					<li><a href="{{ return }}">{{ text_return }}</a></li>
+					<li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+					<li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
+					<li><a href="{{ account }}">{{ text_account }}</a></li>
+					<li><a href="{{ order }}">{{ text_order }}</a></li>
+				</ul>
+		</div>
+      	<div class="footer-right col-xs-12 col-sm-12 col-md-3 column">{{ footer_right }} </div>
+    </div> 
+    </div>
+
+    </div>
+    <div class="footer_bottom_container container">
+      
+    <div class="Footer-bottom row">
+      
+		<div class="copy-right footer-bottom-left col-md-6 col-xs-12">
+			<div id="powered">{{ powered }}</div>
+		</div>
+		<div class="footer-bottom-right col-xs-12 col-md-6 pull-right">{{ footer_bottom }} </div>
+    </div>
+    <div class="bottom-footer col-sm-12">
+      <ul class="list-unstyled">
+        <li><a href="{{ special }}">{{ text_special }}</a></li>
+        
+        <li><a href="{{ voucher }}">{{ text_voucher }}</a></li>
+        <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
+        <li><a href="{{ return }}">{{ text_return }}</a></li>
+        <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+        <li class="contact"><a href="{{ contact }}">{{ text_contact }}</a></li>
+      </ul>
+    </div>
+    </div>
+</footer>
+
+
+		{% if module_live_search_status %}
+			
+			<script type="text/javascript"><!--
+				var live_search = {
+					selector: '#search input[name=\'search\']',
+					text_no_matches: '{{ text_empty }}',
+					height: '50px'
+				}
+
+				$(document).ready(function() {
+					var html = '';
+					html += '<div class="live-search">';
+					html += '	<ul>';
+					html += '	</ul>';
+					html += '<div class="result-text"></div>';
+					html += '</div>';
+
+					//$(live_search.selector).parent().closest('div').after(html);
+					$(live_search.selector).after(html);
+
+					$(live_search.selector).autocomplete({
+						'source': function(request, response) {
+							var filter_name = $(live_search.selector).val();
+							var cat_id = 0;
+							var module_live_search_min_length = '{{ module_live_search_min_length|abs }}';
+							if (filter_name.length < module_live_search_min_length) {
+								$('.live-search').css('display','none');
+							}
+							else{
+								var html = '';
+								html += '<li style="text-align: center;height:10px;">';
+								html +=	'<img class="loading" src="catalog/view/theme/oc01/image/loading.gif" />';
+								html +=	'</li>';
+								$('.live-search ul').html(html);
+								$('.live-search').css('display','block');
+
+								$.ajax({
+									url: 'index.php?route=extension/module/live_search&filter_name=' +  encodeURIComponent(filter_name),
+									dataType: 'json',
+									success: function(result) {
+										var products = result.products;
+										$('.live-search ul li').remove();
+										$('.result-text').html('');
+										if (!$.isEmptyObject(products)) {
+											var show_image = {{ module_live_search_show_image|abs }};
+											var show_price = {{ module_live_search_show_price|abs }};
+											var show_description = {{ module_live_search_show_description|abs }};
+											$('.result-text').html('<a href="{{ module_live_search_href }}'+filter_name+'" class="view-all-results">{{ text_view_all_results|e }} ('+result.total+')</a>');
+
+											$.each(products, function(index,product) {
+												var html = '';
+
+												html += '<li>';
+												html += '<a href="' + product.url + '" title="' + product.name + '">';
+												if(product.image && show_image){
+													html += '	<div class="product-image"><img alt="' + product.name + '" src="' + product.image + '"></div>';
+												}
+												html += '	<div class="product-name">' + product.name ;
+												if(show_description){
+													html += '<p>' + product.extra_info + '</p>';
+												}
+												html += '</div>';
+												if(show_price){
+													if (product.special) {
+														html += '	<div class="product-price"><span class="special">' + product.price + '</span><span class="price">' + product.special + '</span></div>';
+													} else {
+														html += '	<div class="product-price"><span class="price">' + product.price + '</span></div>';
+													}
+												}
+												html += '<span style="clear:both"></span>';
+												html += '</a>';
+												html += '</li>';
+												$('.live-search ul').append(html);
+											});
+										} else {
+											var html = '';
+											html += '<li style="text-align: center;height:10px;">';
+											html +=	live_search.text_no_matches;
+											html +=	'</li>';
+
+											$('.live-search ul').html(html);
+										}
+										$('.live-search').css('display','block');
+										return false;
+									}
+								});
+							}
+						},
+						'select': function(product) {
+							$(live_search.selector).val(product.name);
+						}
+					});
+
+					$(document).bind( "mouseup touchend", function(e){
+					  var container = $('.live-search');
+					  if (!container.is(e.target) && container.has(e.target).length === 0)
+					  {
+					    container.hide();
+					  }
+					});
+				});
+			//--></script>
+		{% endif %}
+            
+{% for script in scripts %}
+<script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/owl-carousel/owl.transitions.css" />
+
+<script>
+$(document).ready(function(){
+ $('.testimonial').owlCarousel({
+		items: 1,
+		autoPlay: true,
+		singleItem: true,
+		navigation: false,	
+		pagination: true,
+		itemsDesktop : [1199,3],
+		itemsDesktopSmall :	[991,3],
+		itemsTablet : [650,2],
+		itemsMobile : [479,1]
+	});
+});
+</script>
+<!--
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+//-->
+</body></html>

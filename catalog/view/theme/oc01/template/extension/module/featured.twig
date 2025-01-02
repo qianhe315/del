@@ -1,0 +1,65 @@
+<div class="section featured container">
+<h3 class="section-heading">{{ heading_title }}</h3>
+{% set sliderFor = 5 %}
+{% set productCount = products|length %}
+
+ <div class="section-block">
+    <div class="section-product {% if productCount >= sliderFor %}section-product product-carousel{% else %} grid {% endif %}">
+      {% for product in products %}
+
+  <div class="{% if productCount >= sliderFor %} slider-item {% else %} product-items col-xs-4 col-sm-4 col-md-3 {% endif %}">     
+    <div class="product-thumb transition">
+    <div class="image">
+                     
+      {% if product.thumb_swap %}
+          <div class="first_image"> <a href="{{ product.href }}"> <img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive" /> </a> </div>
+          <div class="swap_image"> <a href="{{ product.href }}"> <img src="{{ product.thumb_swap }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive"  /> </a></div>
+          {% else %}
+          <a href="{{ product.href }}"> <img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" /> </a>
+          {% endif %}
+          {% if not product.special %}        
+                          {% else %}
+                          <div class="saleback">
+                          <span class="sale">Sale</span>         
+                          </div>
+                          {% endif %} 
+       </div>
+ 
+      <div class="product-details">
+      <div class="button-group">
+        
+        <button type="button" class="wishlist" data-toggle="tooltip" data-placement="right" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product.product_id }}');"><i class="fa fa-heart"></i></button>
+        <button type="button" class="compare"  data-toggle="tooltip" data-placement="right" title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');"><i class="fa fa-exchange"></i></button>
+      <a class="quickview" href="{{ product.quick }}"><i class="fa fa-eye"></i></a>
+      <button type="button" class="addtocart" data-toggle="tooltip" data-placement="right" title="{{ button_addtocart }}" onclick="cart.add('{{ product.product_id }}');">{{ button_cart }}</button>
+      </div>	   
+	  <div class="caption">
+        <div class="rating">
+        {% for i in 1..5 %}
+          {% if product.rating < i %} <span class="fa fa-stack">
+          <i class="fa fa-star fa-stack-2x blank"></i></span>
+           {% else %} <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span> {% endif %}
+          {% endfor %}</div>
+        <h4><a href="{{ product.href }}">{{ product.name }}</a></h4>    
+        
+        {% if product.price %}
+        <p class="price">
+          {% if not product.special %}
+          {{ product.price }}
+          {% else %}
+          <span class="price-new">{{ product.special }}</span> <span class="price-old">{{ product.price }}</span>
+          {% endif %}
+          {% if product.tax %}
+          <span class="price-tax">{{ text_tax }} {{ product.tax }}</span>
+          {% endif %}
+        </p>
+        {% endif %}
+      </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
+  </div>
+

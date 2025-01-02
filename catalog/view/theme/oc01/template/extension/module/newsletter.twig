@@ -1,0 +1,106 @@
+
+<script type="text/javascript">
+    function validatemail() {
+        var pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!pattern.test($('#email').val())) {
+            alert("Please Enter Valid Email");
+            return false;
+        } else {
+            $.ajax({
+                url: 'index.php?route=extension/module/newsletter/jsonnewsletter',
+                type: 'post',
+                data: 'email=' + $('#email').val(),
+                dataType: 'json',
+                success: function(json) {
+                    $('.alert').remove();
+                    if (json.fail) {
+                        $('#common-home').before('<div class="alert alert-danger container"><i class="fa fa-check-circle"></i> ' + json.fail + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+                    } else {
+                        $('#common-home').before('<div class="alert alert-success container"><i class="fa fa-check-circle"></i> ' + json.success + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+                    }
+                    $('html, body').animate({
+                        scrollTop: 500
+                    }, 'slow');
+                }
+            });
+            return false;
+        }
+    }
+</script>
+<script type="text/javascript">
+  
+ 
+    function validatpopupemail() {
+        var pattern1 = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!pattern1.test($('#email-popup').val())) {
+            alert("Please Enter Valid Email");
+            return false;
+        } else {            
+			$.ajax({
+                url: 'index.php?route=extension/module/newsletter/jsonnewsletter',
+                type: 'post',
+                data: 'email=' + $('#email-popup').val(),
+                dataType: 'json',
+                success: function(json) {
+                    $('.alert').remove();
+                    if (json.fail) {
+                        $('#common-home').before('<div class="alert alert-danger container"><i class="fa fa-check-circle"></i> ' + json.fail + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+					
+                    } else {
+                        $('#common-home').before('<div class="alert alert-success container"><i class="fa fa-check-circle"></i> ' + json.success + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+                    }
+                    $('html, body').animate({
+                        scrollTop: 500
+                    }, 'slow');
+					$("#common-home #subscribe-me").modal('hide');
+					
+                }
+            });
+			
+            return false;
+        }
+    }
+</script>
+
+
+<div id="subscribe-me" class="modal animated fade" role="dialog" data-keyboard="true" tabindex="-1">
+<div class="newsletter-popup">
+<img class="offer" src="image/catalog/newsletter_bg.jpg" alt="offer">
+
+<div class="newsletter-popup-static newsletter-popup-top">
+<div class="popup-text">
+<div class="popup-title">{{ popup_txt1 }} <span>{{ popup_txt2 }}</span></div>
+<div class="popup-desc">
+<div>{{ popup_desc }}</div>
+</div>
+</div>
+<form  onsubmit="return  validatpopupemail();" method="post">
+    <div class="form-group required">
+     <input type="email" name="email-popup" id="email-popup" placeholder="{{ newsletter_placeholder }}" class="form-control input-lg" required />
+    <button type="submit" class="btn btn-default btn-lg" id="email-popup-submit">{{ subscribe }}</button>
+    <label class="checkme"><input type="checkbox" value="" id="checkme"/>{{ chk_text }}</label>
+ </div>
+</form>
+
+</div></div>
+</div>
+
+
+
+<div class="newsletters">
+    <div class="container">
+        <div class="news-head pull-left">
+            <h2 class="section-heading"><span> {{ bg_title }}</span>{{ newsletter_title }}</h2>
+            <div class="new-desc">{{ newsletter_desc }}</div>
+        </div>
+        <div class="news-form pull-right">
+            <form onsubmit="return validatemail();" method="post">
+                <div class="form-group required">
+                    <input type="email" name="email" id="email" placeholder="{{ newsletter_placeholder }}" class="form-control input-lg" required />
+                    <button type="submit" class="btn btn-default btn-lg">{{ subscribe }}</button>
+
+                </div>
+            </form>     
+        </div>
+    </div>
+</div>

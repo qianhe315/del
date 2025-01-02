@@ -1,0 +1,85 @@
+{% if categories %}
+<nav id="menu" class="navbar">
+<div class="navbar-header"> <span id="category" class="visible-xs">{{ text_category }}</span>
+  <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+</div>
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+  <ul class="nav navbar-nav main-navigation">
+    <li class="main_cat"> <a href="{{ home }}">{{ text_home }}</a></li> 
+    {% for category in categories %}
+    {% if category.children %}
+    <li class="main_cat dropdown"><a href="{{ category.href }}">{{ category.name }}</a>
+      <div class="dropdown-menu megamenu column{{ category.column }}"> 
+       <div class="dropdown-inner">
+        {% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil')) %}
+        <ul class="list-unstyled childs_1">
+          {% for child in children %} 
+          <!-- 2 Level Sub Categories START --> 
+          
+          {% if child.childs %}
+          <li class="dropdown"><a href="{{ child.href }}">{{ child.name }}</a>
+            <div class="dropdown-menu">
+              <div class="dropdown-inner">
+              {% for childs_col in child.childs|batch(child.childs|length / child.column|round(1, 'ceil')) %}
+                <ul class="list-unstyled childs_2">
+                  {% for childs_2 in childs_col %}
+                  <li><a href="{{ childs_2.href }}">{{ childs_2.name }}</a></li>
+                  {% endfor %}
+                </ul>
+                {% endfor %} 
+              </div>
+         </div>
+            </li>
+          {% else %}
+          <li class="main_cat"><a href="{{ child.href }}">{{ child.name }}</a></li>
+          {% endif %} 
+          <!-- 2 Level Sub Categories END --> 
+          {% endfor %}
+        </ul>
+		
+        {% endfor %}
+        
+         </div>
+       {% if category.thumb %}<div class="menu_image">   <img src="{{ category.thumb }}" alt="" title="" class="img-thumbnail" /> </div>  {% endif %}
+         </div>
+    </li>
+	
+    {% else %}
+    <li class="main_cat"><a href="{{ category.href }}">{{ category.name }} </a>      
+    </li>
+
+    {% endif %}
+    {% endfor %}
+	<li>  <a href="index.php?route=information/blogger/blogs">{{ text_blog }}</a>
+  </ul>
+  </div>
+</nav> 
+
+<div id="responsive-menu" class="nav-container1 nav-responsive navbar collapse">
+
+    <div class="navbar-collapse navbar-ex1-collapse collapse in">
+              <ul class="nav navbar-nav">
+                {% for category in categories %}
+				{% if category.children %}
+				<li class="collapsed" data-toggle="collapse" data-target="#{{ category.name }}"><a href="{{ category.href }}">{{ category.name }}</a>
+				 
+				 <span><i class="fa fa-plus"></i></span>
+				  <ul class="menu-dropdown collapse" id="{{ category.name }}">
+					 {% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil')) %}
+					 
+						{% for child in children %}
+						<li><a href="{{ child.href }}">{{ child.name }}</a>					
+						</li>
+						{% endfor %}
+					  
+					  {% endfor %}
+					</ul>
+				</li>
+				{% else %}
+				<li><a href="{{ category.href }}">{{ category.name }}</a></li>
+				{% endif %}
+				{% endfor %}  
+                 <li> <a href="index.php?route=information/blogger/blogs">{{ text_blog }}</a></li>
+              </ul>
+            </div></div>
+ {% endif %}

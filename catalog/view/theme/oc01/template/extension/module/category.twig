@@ -1,0 +1,32 @@
+<div class="sidebar section sidebar_category">
+  <div class="section-heading">{{ heading_title }}</div>
+  <div class="section-block">
+    <ul class="left-category">        
+         {% for category in categories %}
+		{% if category.category_id == category_id %}
+         <li data-toggle="collapse" data-target="#cat{{ category.name|replace('/[^0-9+]/', '') }}">
+        <a href="{{ category.href }}" class="active">{{ category.name }}</a>
+        {% else %}
+         <li class="collapsed" data-toggle="collapse" data-target="#cat{{ category.name|replace('/[^A-Za-z0-9\-]/', '') }}">
+        <a href="{{ category.href }}">{{ category.name }}</a>
+        {% endif %}
+        {% if category.children %} 
+        <span><i class="fa fa-plus"></i></span>       
+       <ul class="collapse" id="cat{{ category.name|replace('/[^A-Za-z0-9\-]/', '') }}">          
+           {% for child in category.children %}
+            {% if child.category_id == child_id %}
+          <li class="active">
+            <a href="{{ child.href }}" class="active">{{ child.name }}</a>
+            {% else %}
+           <li>
+            <a href="{{ child.href }}">{{ child.name }}</a>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+	</div>
+</div>

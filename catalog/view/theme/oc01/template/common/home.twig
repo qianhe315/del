@@ -1,0 +1,33 @@
+{{ header }}
+{{ content_top }}
+<div id="common-home">
+  <div class="row">{{ column_left }}
+    {% if column_left and column_right %}
+    {% set class = 'col-sm-6' %}
+    {% elseif column_left or column_right %}
+    {% set class = 'col-sm-9' %}
+    {% else %}
+    {% set class = 'col-sm-12' %}
+    {% endif %}
+    <div id="content" class="{{ class }}">{{ content_bottom }}</div>
+    {{ column_right }}</div>
+</div>
+{{ footer }}
+<script type="text/javascript">
+$(document).ready(function(){
+$('.product-carousel').owlCarousel({
+		items: 4,
+		autoPlay: false,
+		singleItem: false,
+		navigation: true,		
+		pagination: false,
+		itemsDesktop : [1199,3],
+		itemsDesktopSmall :	[991,3],
+		itemsTablet : [650,2],
+		itemsMobile : [479,1]
+	});	
+});	
+
+
+
+</script>

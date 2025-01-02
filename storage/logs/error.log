@@ -1,0 +1,86 @@
+2024-12-31 6:47:16 - PHP Warning:  fopen(/www/wwwroot/leotard_demo/catalog/view/theme//stylesheet/bootstrap.css): failed to open stream: No such file or directory in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 14
+2024-12-31 6:47:16 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 16
+2024-12-31 6:47:16 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 18
+2024-12-31 6:47:16 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 20
+2024-12-31 6:47:16 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 22
+2024-12-31 6:47:16 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 24
+2024-12-31 6:52:29 - PHP Warning:  fopen(/www/wwwroot/leotard_demo/catalog/view/theme//stylesheet/bootstrap.css): failed to open stream: No such file or directory in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 14
+2024-12-31 6:52:29 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 16
+2024-12-31 6:52:29 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 18
+2024-12-31 6:52:29 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 20
+2024-12-31 6:52:29 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 22
+2024-12-31 6:52:29 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 24
+2024-12-31 6:52:32 - PHP Warning:  fopen(/www/wwwroot/leotard_demo/catalog/view/theme//stylesheet/bootstrap.css): failed to open stream: No such file or directory in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 14
+2024-12-31 6:52:32 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 16
+2024-12-31 6:52:32 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 18
+2024-12-31 6:52:32 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 20
+2024-12-31 6:52:32 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 22
+2024-12-31 6:52:32 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 24
+2024-12-31 6:53:30 - PHP Warning:  fopen(/www/wwwroot/leotard_demo/catalog/view/theme//stylesheet/bootstrap.css): failed to open stream: No such file or directory in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 14
+2024-12-31 6:53:30 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 16
+2024-12-31 6:53:30 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 18
+2024-12-31 6:53:30 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 20
+2024-12-31 6:53:30 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 22
+2024-12-31 6:53:30 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 24
+2024-12-31 6:53:30 - PHP Warning:  fopen(/www/wwwroot/leotard_demo/catalog/view/theme//stylesheet/bootstrap.css): failed to open stream: No such file or directory in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 14
+2024-12-31 6:53:30 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 16
+2024-12-31 6:53:30 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 18
+2024-12-31 6:53:30 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 20
+2024-12-31 6:53:30 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 22
+2024-12-31 6:53:30 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 24
+2024-12-31 6:53:30 - PHP Warning:  fopen(/www/wwwroot/leotard_demo/catalog/view/theme//stylesheet/bootstrap.css): failed to open stream: No such file or directory in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 14
+2024-12-31 6:53:30 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 16
+2024-12-31 6:53:30 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 18
+2024-12-31 6:53:30 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 20
+2024-12-31 6:53:30 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 22
+2024-12-31 6:53:30 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 24
+2024-12-31 6:53:31 - PHP Warning:  fopen(/www/wwwroot/leotard_demo/catalog/view/theme//stylesheet/bootstrap.css): failed to open stream: No such file or directory in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 14
+2024-12-31 6:53:31 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 16
+2024-12-31 6:53:31 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 18
+2024-12-31 6:53:31 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 20
+2024-12-31 6:53:31 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 22
+2024-12-31 6:53:31 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 24
+2024-12-31 6:53:31 - PHP Warning:  fopen(/www/wwwroot/leotard_demo/catalog/view/theme//stylesheet/bootstrap.css): failed to open stream: No such file or directory in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 14
+2024-12-31 6:53:31 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 16
+2024-12-31 6:53:31 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 18
+2024-12-31 6:53:31 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 20
+2024-12-31 6:53:31 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 22
+2024-12-31 6:53:31 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 24
+2024-12-31 6:53:31 - PHP Warning:  fopen(/www/wwwroot/leotard_demo/catalog/view/theme//stylesheet/bootstrap.css): failed to open stream: No such file or directory in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 14
+2024-12-31 6:53:31 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 16
+2024-12-31 6:53:31 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 18
+2024-12-31 6:53:31 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 20
+2024-12-31 6:53:31 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 22
+2024-12-31 6:53:31 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 24
+2024-12-31 6:53:31 - PHP Warning:  fopen(/www/wwwroot/leotard_demo/catalog/view/theme//stylesheet/bootstrap.css): failed to open stream: No such file or directory in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 14
+2024-12-31 6:53:31 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 16
+2024-12-31 6:53:31 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 18
+2024-12-31 6:53:31 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 20
+2024-12-31 6:53:31 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 22
+2024-12-31 6:53:31 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 24
+2024-12-31 6:57:33 - PHP Warning:  fopen(/www/wwwroot/leotard_demo/catalog/view/theme//stylesheet/bootstrap.css): failed to open stream: No such file or directory in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 14
+2024-12-31 6:57:33 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 16
+2024-12-31 6:57:33 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 18
+2024-12-31 6:57:33 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 20
+2024-12-31 6:57:33 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 22
+2024-12-31 6:57:33 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 24
+2024-12-31 7:02:02 - PHP Warning:  fopen(/www/wwwroot/leotard_demo/catalog/view/theme//stylesheet/bootstrap.css): failed to open stream: No such file or directory in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 14
+2024-12-31 7:02:02 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 16
+2024-12-31 7:02:02 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 18
+2024-12-31 7:02:02 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 20
+2024-12-31 7:02:02 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 22
+2024-12-31 7:02:02 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 24
+2025-01-02 0:50:48 - PHP Warning:  fopen(/www/wwwroot/leotard_demo/catalog/view/theme//stylesheet/bootstrap.css): failed to open stream: No such file or directory in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 14
+2025-01-02 0:50:48 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 16
+2025-01-02 0:50:48 - PHP Warning:  fwrite() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 18
+2025-01-02 0:50:48 - PHP Warning:  fflush() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 20
+2025-01-02 0:50:48 - PHP Warning:  flock() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 22
+2025-01-02 0:50:48 - PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /www/wwwroot/leotard_demo/catalog/controller/startup/sass.php on line 24
+2025-01-02 2:42:02 - PHP Notice:  Array to string conversion in /www/wwwroot/leotard_demo/catalog/model/tool/image.php on line 4
+2025-01-02 2:42:02 - PHP Notice:  Array to string conversion in /www/wwwroot/leotard_demo/catalog/model/tool/image.php on line 4
+2025-01-02 2:42:28 - PHP Notice:  Array to string conversion in /www/wwwroot/leotard_demo/catalog/model/tool/image.php on line 4
+2025-01-02 2:42:28 - PHP Notice:  Array to string conversion in /www/wwwroot/leotard_demo/catalog/model/tool/image.php on line 4
+2025-01-02 2:46:01 - PHP Notice:  Array to string conversion in /www/wwwroot/leotard_demo/catalog/model/tool/image.php on line 4
+2025-01-02 2:46:01 - PHP Notice:  Array to string conversion in /www/wwwroot/leotard_demo/catalog/model/tool/image.php on line 4
+2025-01-02 6:34:19 - PHP Notice:  Array to string conversion in /www/wwwroot/leotard_demo/catalog/model/tool/image.php on line 4
+2025-01-02 6:34:19 - PHP Notice:  Array to string conversion in /www/wwwroot/leotard_demo/catalog/model/tool/image.php on line 4

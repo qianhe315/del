@@ -1,0 +1,52 @@
+<div class="section blog container">
+
+  {% set sliderFor = 2 %}
+{% set blogCount = blogs|length %}
+
+  <div class="section-heading">{{ heading_title }}</div>
+  <div class="section-block">
+    <div class="section-product {% if blogCount > sliderFor %} owl-carousel blogcarousel{% else %}grid{% endif %}" id="{% if blogCount >= sliderFor %}blog-carousel{% else %}blog-grid{% endif %}">
+    
+    {% for blog in blogs %}
+	<div class="{% if blogCount > sliderFor %}blog-item{% else %}product-items col-xs-6 col-sm-6{% endif %}">
+	<div class="product-thumb">
+     {% if blog.image %}
+	  <div class="blog-image">
+	  <img src="{{ blog.image }}" alt="{{ heading_title }}" title="{{ heading_title }}" class="img-thumbnail" />
+<div class="post_hover">
+<div class="date-time"> <div class="day">  {{ blog.date_added }}</div><div class="month">{{ blog.date_added_mnth }}</div></div>
+ <div class="write-comment"> <a href="{{ blog.href }}"> {{ blog.total_comments }} {{ entry_comment }}</a> </div>
+ <h4><a href="{{ blog.href }}">{{ blog.title }}</a> </h4>
+      <div class="blog-desc"> {{ blog.description }} </div>
+	  	
+		<div class="read-more"> <a href="{{ blog.href }}"> {{ text_read_more }}</a> </div>
+
+      </div>
+	  </div>
+	 {% endif %}
+    </div>
+	</div>	
+   {% endfor %}
+  </div>
+   <div class="buttons text-center">
+      <button type="button" onclick="location='{{ all_blogs }}';" class="btn btn-primary">{{ button_all_blogs }}</button>
+    </div>
+  </div> 
+ 
+</div>
+<script type="text/javascript"><!--
+
+$(document).ready(function(){
+$('.blogcarousel').owlCarousel({
+		items: 2,
+		autoPlay: false,
+		singleItem: false,
+		navigation: false,
+		pagination: false,
+		itemsDesktop : [1199,2],
+		itemsDesktopSmall :	[991,1],
+		itemsTablet : [675,1],
+		itemsMobile : [479,1]
+	});
+	});
+--></script>
